@@ -1,0 +1,22 @@
+{
+  "name": "genshin-helper",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "NODE_DEBUG=genshin nodemon index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  },
+  "dependencies": {
+    "md5": "^2.3.0",
+    "node-machine-id": "^1.1.12",
+    "randomstring": "^1.2.1",
+    "request": "^2.88.2",
+    "string-format": "^2.0.0",
+    "undici": "^4.8.1"
+  }
+}
