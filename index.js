@@ -12,7 +12,9 @@ async function main() {
   const response = await apis.getUserGameRoles()
   if (response.data) {
     const [role] = response.data.list
+    debug('角色信息', role)
     const { data: info } = await apis.getRewardInfo(role.region, role.game_uid)
+    debug(info)
     debug('是否已签到', info.is_sign)
     if (info.first_bind) {
       debug('请先前往米游社App手动签到一次')
