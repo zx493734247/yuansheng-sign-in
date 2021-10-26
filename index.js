@@ -12,18 +12,22 @@ async function main() {
   const response = await apis.getUserGameRoles()
   if (response.data) {
     const [role] = response.data.list
-    debug('角色信息', role)
-    const { data: info } = await apis.getRewardInfo(role.region, role.game_uid)
-    debug(info)
-    debug('是否已签到', info.is_sign)
-    if (info.first_bind) {
+    const rewardInfo = await apis.getRewardInfo(role.region, role.game_uid)
+    if (rewardInfo.retcode !== 0) {
+      debug(rewardInfo.message)
+      return
+    }
+
+    if (rewardInfo.data.first_bind) {
       debug('请先前往米游社App手动签到一次')
       return
     }
-    if (!info.is_sign) {
+    if (!rewardInfo.data.is_sign) {
       debug('开始签到')
       const result = await apis.bbsSignReward(role.region, role.game_uid)
       debug(result.message)
+    } else {
+      debug('已签到')
     }
   }
 }
