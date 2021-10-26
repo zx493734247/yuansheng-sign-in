@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "NODE_DEBUG=genshin node index.js",
     "dev": "NODE_DEBUG=genshin nodemon index.js"
   },
   "author": "Finger36 <helianyanghly@gmail.com>",
