@@ -47,7 +47,13 @@ function getUserGameRoles() {
 
 // 获取当前签到状态信息
 function getRewardInfo(region, uid) {
-  return undici.request(CONFIG.INFO_URL.format(region, uid), { headers }).then((res) => res.body.json())
+  return undici
+    .request(CONFIG.INFO_URL.format(region, uid), { headers })
+    .then((res) => res.body.json())
+    .then((res) => {
+      debug('获取当前签到状态信息', res)
+      return res
+    })
 }
 
 // 获取签到奖励列表
