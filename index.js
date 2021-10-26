@@ -4,7 +4,11 @@ const util = require('util')
 const debug = util.debuglog('genshin')
 
 async function main() {
-  debug('开始', Date.now())
+  debug('开始', new Date().toLocaleString())
+  if (!process.env.COOKIE) {
+    debug('环境变量 COOKIE 未配置，退出...')
+    process.exit()
+  }
   const response = await apis.getUserGameRoles()
   if (response.data) {
     const [role] = response.data.list

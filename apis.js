@@ -32,7 +32,7 @@ const headers = {
   'x-rpc-app_version': CONFIG.APP_VERSION,
   DS: getDS(),
   Referer: CONFIG.REFERER_URL,
-  Cookie: CONFIG.cookie_test,
+  Cookie: process.env.COOKIE,
 }
 
 console.log(headers)
