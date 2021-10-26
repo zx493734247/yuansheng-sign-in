@@ -8,7 +8,12 @@ format.extend(String.prototype, {})
 
 const CONFIG = require('./settings')
 
+const util = require('util')
+
+const debug = util.debuglog('genshin')
+
 // process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
+debug(machineIdSync({ original: true }))
 
 function getDS() {
   const randomStr = randomstring.generate({ length: 6 })
@@ -34,8 +39,6 @@ const headers = {
   Referer: CONFIG.REFERER_URL,
   Cookie: process.env.COOKIE,
 }
-
-console.log(headers)
 
 // 获取角色信息
 function getUserGameRoles() {
