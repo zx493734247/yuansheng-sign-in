@@ -15,7 +15,6 @@ if (process.env.MAIL_HOST && process.env.MAIL_USERNAME && process.env.MAIL_PASSW
     },
   })
 }
-debug('transporter', process.env.MAIL_HOST, transporter)
 
 function sendMail(text) {
   if (!transporter) return

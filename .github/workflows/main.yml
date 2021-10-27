@@ -31,4 +31,8 @@ jobs:
       - name: Run sign
         env:
           COOKIE: ${{secrets.COOKIE}}
+          MAIL_HOST: ${{secrets.MAIL_HOST}}
+          MAIL_USERNAME: ${{secrets.MAIL_USERNAME}}
+          MAIL_PASSWORD: ${{secrets.MAIL_PASSWORD}}
+          MAIL_USERNAME_TO: ${{secrets.MAIL_USERNAME_TO}}
         run: npm start
