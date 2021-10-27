@@ -12,8 +12,10 @@
     "nodemon": "^2.0.14"
   },
   "dependencies": {
+    "dotenv": "^10.0.0",
     "md5": "^2.3.0",
     "node-machine-id": "^1.1.12",
+    "nodemailer": "^6.7.0",
     "randomstring": "^1.2.1",
     "string-format": "^2.0.0",
     "undici": "^4.8.1"

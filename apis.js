@@ -8,11 +8,8 @@ format.extend(String.prototype, {})
 
 const CONFIG = require('./settings')
 
-const util = require('util')
+const debug = require('util').debuglog('genshin')
 
-const debug = util.debuglog('genshin')
-
-// process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
 debug(machineIdSync({ original: true }))
 
 function getDS() {
