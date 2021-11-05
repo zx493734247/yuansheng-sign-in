@@ -4,8 +4,11 @@ Genshin Helper 可以自动化为你获取原神每日福利。
 
 通过 github actions 每日定时执行签到任务，执行结果进行邮件通知
 
+## 如何使用
 
-### 获取米游社Cookie
+### 1. Fork 仓库
+- 点击右上角`Fork`到自己的账号下
+### 2. 获取米游社Cookie
 
 1. 打开你的浏览器,进入无痕/隐身模式
 2. 由于米哈游修改了bbs可以获取的`Cookie`，导致一次获取的`Cookie`缺失，所以需要增加步骤
@@ -27,7 +30,7 @@ if (ask == true) {
 7. 此时`Cookie`已经复制到你的粘贴板上了
 
 
-### 添加环境变量至 Secrets
+### 3. 添加环境变量至 Secrets
 
 - 回到项目页面，依次点击`Settings`-->`Secrets`-->`New secret`
 
