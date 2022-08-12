@@ -1,7 +1,7 @@
 require('dotenv').config()
 
 const ACT_ID = 'e202009291139501'
-const APP_VERSION = '2.3.0'
+const APP_VERSION = '2.34.1'
 
 module.exports = {
   ACT_ID,

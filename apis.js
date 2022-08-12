@@ -17,7 +17,7 @@ function getDS() {
   const timestamp = Math.floor(Date.now() / 1000)
 
   // iOS sign
-  const sign = md5(`salt=h8w582wxwgqvahcdkpvdhbh2w9casgfl&t=${timestamp}&r=${randomStr}`)
+  const sign = md5(`salt=9nQiU3AV0rJSIBWgdynfoGMGKaklfbM7&t=${timestamp}&r=${randomStr}`)
   const DS = `${timestamp},${randomStr},${sign}`
   return DS
 }
