@@ -32,7 +32,7 @@ if (ask == true) {
 
 ### 3. 添加环境变量至 Secrets
 
-- 回到项目页面，依次点击`Settings`-->`Secrets`-->`New secret`
+- 回到项目页面，依次点击`Settings`-->`Secrets`-->`new repository secret`
 
 - 建立名为`COOKIE`的 secret，值为米游社复制的`Cookie`内容，最后点击`Add secret`
 
