@@ -2,7 +2,7 @@
 
 Genshin Helper 可以自动化为你获取原神每日福利。
 
-通过 github actions 每日定时执行签到任务，执行结果进行邮件通知
+通过 github actions 每日定时执行签到任务，执行结果进行邮件通知。
 
 ## 如何使用
 
