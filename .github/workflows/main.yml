@@ -8,9 +8,8 @@ on:
   
   # 定时执行
   schedule:
-    # scheduled at 00:30 (UTC+8) everyday
-    - cron: "30 16 * * *"
-  # Allows you to run this workflow manually from the Actions tab
+  # 每天9点执行 时间格式 minute hour day month week 设置的时间是UTC 不是北京时间 需要+8
+    - cron: "0 1 * * *"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
